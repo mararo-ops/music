@@ -20,3 +20,11 @@ The project aims to address these challenges by providing a digital management s
     .Usage
     .Contributing
     .License
+
+    Getting Started
+## Prerequisites
+
+Before you begin, ensure you have the following prerequisites installed:
+
+    Python (version 3.6 or higher)
+    Pipenv (for managing virtual environments)

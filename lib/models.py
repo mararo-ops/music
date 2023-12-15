@@ -22,4 +22,3 @@ class Artwork(Base):
     style_of_art = Column(String)
     price = Column(Integer)
     artist = relationship('Artist', back_populates='artworks')
-

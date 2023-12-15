@@ -12,3 +12,14 @@ class Artist(Base):
     birthplace = Column(String)
     style_of_work = Column(String)
     artworks = relationship('Artwork', back_populates='artist')
+
+class Artwork(Base):
+    __tablename__ = 'artworks'
+    id = Column(Integer, primary_key=True)
+    artist_id = Column(Integer, ForeignKey('artists.id'))
+    year_of_making = Column(Integer)
+    unique_title = Column(String)
+    style_of_art = Column(String)
+    price = Column(Integer)
+    artist = relationship('Artist', back_populates='artworks')
+

@@ -11,3 +11,12 @@ Art galleries often face challenges in efficiently organizing and managing infor
 ## Solution
 
 The project aims to address these challenges by providing a digital management system for art galleries. This system allows users to add artists, artworks, update artwork details, and view comprehensive data about artists and their creations. It aims to streamline the management process for art galleries, enhancing the overall efficiency and organization of gallery operations.
+
+## Table of Contents
+
+    .Getting Started
+        Prerequisites
+        Installation
+    .Usage
+    .Contributing
+    .License

@@ -65,3 +65,58 @@ def update_artwork():
         print(f"\nArtwork '{title}' updated successfully.")
     else:
         print(f"\nArtwork '{title}' not found.")
+
+
+def view_all_data():
+    password = input("\nEnter password to view all data: ")
+    if password == "1234":
+        artists = session.query(Artist).all()
+        artworks = session.query(Artwork).all()
+
+        print("\n----- Artists -----")
+        for artist in artists:
+            print(f"ID: {artist.id}, Name: {artist.name}, Age: {artist.age}, Birthplace: {artist.birthplace}, Style of Work: {artist.style_of_work}")
+
+        print("\n----- Artworks -----")
+        for artwork in artworks:
+            print(f"ID: {artwork.id}, Artist ID: {artwork.artist_id}, Title: {artwork.unique_title}, Year of Making: {artwork.year_of_making}, Style of Art: {artwork.style_of_art}, Price: {artwork.price}")
+    else:
+        print("\nIncorrect password. Access denied.")
+
+if __name__ == "__main__":
+    create_database()  
+    while True:
+        print("\n=====WELCOME=====:")
+        print("1. Add Artist")
+        print("2. Add Artwork")
+        print("3. Delete Artwork")
+        print("4. Update Artwork")
+        print("5. View All Data")
+        print("6. Exit")
+
+        command = input("\nEnter command number: ").strip().lower()
+
+        if command == "1":
+            add_artist()
+        elif command == "2":
+            add_artwork()
+        elif command == "3":
+            delete_artwork_by_title()
+        elif command == "4":
+            update_artwork()
+        elif command == "5":
+            view_all_data()
+        elif command == "6":
+            break
+        else:
+            print("\nInvalid command. Please enter a valid command number.")
+
+
+
+
+
+
+
+
+
+

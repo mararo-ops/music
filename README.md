@@ -97,3 +97,7 @@ Exiting:
 bash
 
 python cli.py 6
+
+## Contributing
+
+Contributions to our project are highly encouraged and welcome! If you'd like to contribute, please follow these steps:

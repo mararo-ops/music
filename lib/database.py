@@ -7,3 +7,6 @@ engine = create_engine(DATABASE_URI)
 
 Session = sessionmaker(bind=engine)
 session = Session()
+
+def create_database():
+    Base.metadata.create_all(engine)

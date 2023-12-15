@@ -98,6 +98,9 @@ bash
 
 python cli.py 6
 
-## Contributing
 
-Contributions to our project are highly encouraged and welcome! If you'd like to contribute, please follow these steps:
+## License
+
+This project is licensed under the MIT License. For details, see the LICENSE.md file.
+
+Thank you for contributing to the Local Art Gallery Management System, and we look forward to growing our community of art enthusiasts and gallery administrators together!

@@ -41,3 +41,27 @@ def delete_artwork_by_title():
         print(f"\nArtwork '{title}' deleted successfully.")
     else:
         print(f"\nArtwork '{title}' not found.")
+
+
+def update_artwork():
+    title = input("\nEnter the unique title of the artwork to update: ")
+
+    artwork = session.query(Artwork).filter(Artwork.unique_title.ilike(title)).first()
+    if artwork:
+        print(f"\nCurrent details of '{title}':")
+        print(f"Year of making: {artwork.year_of_making}")
+        print(f"Style of art: {artwork.style_of_art}")
+        print(f"Price: {artwork.price}")
+
+        new_year_of_making = int(input("\nEnter new year of making (press Enter to keep current): ") or artwork.year_of_making)
+        new_style_of_art = input("Enter new style of art (press Enter to keep current): ") or artwork.style_of_art
+        new_price = int(input("Enter new price (press Enter to keep current): ") or artwork.price)
+
+        artwork.year_of_making = new_year_of_making
+        artwork.style_of_art = new_style_of_art
+        artwork.price = new_price
+
+        session.commit()
+        print(f"\nArtwork '{title}' updated successfully.")
+    else:
+        print(f"\nArtwork '{title}' not found.")

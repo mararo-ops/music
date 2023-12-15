@@ -28,3 +28,24 @@ Before you begin, ensure you have the following prerequisites installed:
 
     Python (version 3.6 or higher)
     Pipenv (for managing virtual environments)
+
+## Installation
+
+    Clone the repository:
+
+    bash
+
+git clone <repository-url>
+cd artGalleryManagement
+
+Set up a virtual environment using Pipenv:
+
+bash
+
+pipenv install
+
+Activate the virtual environment:
+
+bash
+
+pipenv shell

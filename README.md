@@ -49,3 +49,51 @@ Activate the virtual environment:
 bash
 
 pipenv shell
+
+## Usage
+
+    Adding Artist:
+
+    bash
+
+python cli.py 1
+
+Follow the prompts to provide details such as name, age, birthplace, and style of work.
+
+Adding Artwork:
+
+bash
+
+python cli.py 2
+
+Follow the prompts to add artwork details, including the artist's name, year of making, unique title, style of art, and price.
+
+Deleting Artwork by Title:
+
+bash
+
+python cli.py 3
+
+Enter the unique title of the artwork to delete.
+
+Updating Artwork:
+
+bash
+
+python cli.py 4
+
+Enter the unique title of the artwork to update and follow the prompts to modify details.
+
+Viewing All Data:
+
+bash
+
+python cli.py 5
+
+Enter the password to view all data.
+
+Exiting:
+
+bash
+
+python cli.py 6

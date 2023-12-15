@@ -30,3 +30,14 @@ def add_artwork():
         print(f"\nAdded artwork: {unique_title} by {artist_name}")
     else:
         print(f"\nArtist {artist_name} not found.")
+
+def delete_artwork_by_title():
+    title = input("\nEnter the unique title of the artwork to delete: ")
+
+    artwork = session.query(Artwork).filter(Artwork.unique_title.ilike(title)).first()
+    if artwork:
+        session.delete(artwork)
+        session.commit()
+        print(f"\nArtwork '{title}' deleted successfully.")
+    else:
+        print(f"\nArtwork '{title}' not found.")
